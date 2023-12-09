@@ -48,7 +48,7 @@ export default function Title({ initialData }: TitleProps) {
   };
 
   return (
-    <div className="flex items-center gapx-1">
+    <div className="flex justify-center items-center gap-x-1">
       {!!initialData.icon && <p>{initialData.icon}</p>}
       {isEditing ? (
         <Input
@@ -67,7 +67,7 @@ export default function Title({ initialData }: TitleProps) {
           size="sm"
           className="font-normal h-auto p-1"
         >
-          <span className="truncate">{initialData?.title}</span>
+          <span className="truncate w-40 text-left">{initialData?.title}</span>
         </Button>
       )}
     </div>
