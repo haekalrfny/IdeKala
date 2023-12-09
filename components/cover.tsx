@@ -35,13 +35,13 @@ export default function Cover({ url, preview }: CoverImageProps) {
     <div
       className={cn(
         "relative w-full h-[35vh] group",
-        !url && "h-[12vh]",
+        !url && "h-[10vh]",
         url && "bg-muted"
       )}
     >
       {!!url && <Image src={url} fill alt="Cover" className="object-cover" />}
       {url && !preview && (
-        <div className="opacity-0 group-hover:opacity-100 absolute bottom-5 right-5 flex items-center gap-x-2">
+        <div className="absolute bottom-5 right-5 flex items-center gap-x-2">
           <Button
             onClick={() => coverImage.onReplace(url)}
             className="text-muted-foreground text-xs"

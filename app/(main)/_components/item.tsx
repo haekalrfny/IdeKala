@@ -100,7 +100,7 @@ export default function Item({
       role="button"
       style={{ paddingLeft: level ? `${level * 12 + 12}px ` : "12px" }}
       className={cn(
-        "group min-h-[27px] text-sm py-1 pr-3 w-full hover:bg-primary/5 flex items-center text-muted-foreground font-medium",
+        "group min-h-[27px] text-lg py-1 pr-3 w-full hover:bg-primary/5 flex items-center text-muted-foreground font-medium",
         active && "bg-primary/5 text-primary"
       )}
     >
@@ -121,7 +121,7 @@ export default function Item({
       <span className="truncate">{label}</span>
       {isSearch && (
         <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-          <span className="text-xs">ctrl + k</span>
+          <span className="text-sm">ctrl + k</span>
         </kbd>
       )}
       {!!id && (
@@ -130,9 +130,9 @@ export default function Item({
             <DropdownMenuTrigger onClick={(e) => e.stopPropagation()} asChild>
               <div
                 role="button"
-                className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600"
+                className="h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600"
               >
-                <MoreHorizontal className="w-4 h-4 text-muted-foreground" />
+                <MoreHorizontal className="w-6 h-6 text-muted-foreground" />
               </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -142,7 +142,7 @@ export default function Item({
               forceMount
             >
               <DropdownMenuItem onClick={onArchive}>
-                <Trash className="w-4 h-4 mr-2" />
+                <Trash className="w-6 h-6 mr-2" />
                 Delete
               </DropdownMenuItem>
               <DropdownMenuSeparator />
@@ -154,9 +154,9 @@ export default function Item({
           <div
             role="button"
             onClick={onCreate}
-            className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600"
+            className="h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600"
           >
-            <Plus className="h-4 w-3 text-muted-foreground" />
+            <Plus className="h-6 w-5 text-muted-foreground" />
           </div>
         </div>
       )}
